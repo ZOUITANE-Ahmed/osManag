@@ -1,116 +1,121 @@
-### Man_os2
-### Library Name: `Man_os2`
+# osManag
 
-#### Role:
-The `Man_os2` library provides a set of utility functions for file and directory management tasks such as creating, removing, renaming, and listing files and directories. It also includes functions for file operations like reading and writing, as well as retrieving system and environmental information.
+`osManag`(Operating System Management) is a Python library for managing files and folders easily and quickly. The library includes multiple functions for creating, reading, writing, and deleting files and folders, as well as changing directories and listing directory contents.
 
 
+## Usage
 
-#### Functions and Usage:
+### Import the Library
 
-1. **`touch(File_Name)`**: Creates an empty file if it doesn't already exist.
+```python
+import osManag
+```
 
-   ```python
-   import Man_os2
+### Available Functions
 
-   print(Man_os2.touch("example.txt"))
-   ```
+#### 1. Create a File
 
-2. **`cat(File_Name)`**: Reads the content of a file.
+```python
+osManag.touch('filename.txt')
+```
 
-   ```python
-   print(Man_os2.cat("example.txt"))
-   ```
+#### 2. Read a File
 
-3. **`nano(File_Name, Mode, Write)`**: Writes content to a file. The mode can be 'w' (write) or 'a' (append).
+```python
+osManag.cat('filename.txt')
+```
 
-   ```python
-   print(Man_os2.nano("example.txt", "w", "Hello, world!"))
-   ```
+#### 3. Write to a File
 
-4. **`rm(File_Name)`**: Removes a file.
+```python
+osManag.nano('filename.txt', 'w', 'Hello, World!')
+```
 
-   ```python
-   print(Man_os2.rm("example.txt"))
-   ```
+#### 4. Delete a File
 
-5. **`mkdir(Folder_Name)`**: Creates a new directory.
+```python
+osManag.rm('filename.txt')
+```
 
-   ```python
-   print(Man_os2.mkdir("new_folder"))
-   ```
+#### 5. Create a Folder
 
-6. **`rmdir(Folder_Name)`**: Removes a directory.
+```python
+osManag.mkdir('foldername')
+```
 
-   ```python
-   print(Man_os2.rmdir("new_folder"))
-   ```
+#### 6. Delete a Folder
 
-7. **`ren(Name, New_Name)`**: Renames a file or directory.
+```python
+osManag.rmdir('foldername')
+```
 
-   ```python
-   print(Man_os2.ren("old_name.txt", "new_name.txt"))
-   ```
+#### 7. Rename a File or Folder
 
-8. **`mv(source_path, destination_path)`**: Moves a file or directory from one path to another.
+```python
+osManag.ren('oldname', 'newname')
+```
 
-   ```python
-   print(Man_os2.mv("file.txt", "new_location/file.txt"))
-   ```
+#### 8. Move a File or Folder
 
-9. **`cd(path)`**: Changes the current working directory.
+```python
+osManag.mv('source_path', 'destination_path')
+```
 
-   ```python
-   print(Man_os2.cd("/path/to/directory"))
-   ```
+#### 9. Change the Current Directory
 
-10. **`tree(chomain)`**: Lists all files and directories in a directory tree.
+```python
+osManag.cd('path')
+```
 
-    ```python
-    print(Man_os2.tree("."))
-    ```
+#### 10. Display Directory Tree
 
-11. **`pwd()`**: Returns the current working directory.
+```python
+osManag.tree('path')
+```
 
-    ```python
-    print(Man_os2.pwd())
-    ```
+#### 11. Display Current Directory
 
-12. **`ls(path)`**: Lists files and directories in a specified path.
+```python
+osManag.pwd()
+```
 
-    ```python
-    print(Man_os2.ls("."))
-    ```
+#### 12. List Directory Contents
 
-13. **`ls_l(path)`**: Lists files and directories with detailed information such as size and last modified time.
+```python
+osManag.ls('path')
+```
 
-    ```python
-    print(Man_os2.ls_l("."))
-    ```
+#### 13. List Directory Contents with Details
 
-14. **`istime(path_Name)`**: Returns the last access time of a file.
+```python
+osManag.ls_l('path')
+```
 
-    ```python
-    print(Man_os2.istime("example.txt"))
-    ```
+#### 14. Display Last Access Time of a File
 
-15. **`size(path_Name)`**: Returns the size of a file.
+```python
+osManag.istime('filename.txt')
+```
 
-    ```python
-    print(Man_os2.size("example.txt"))
-    ```
+#### 15. Display File Size
 
-16. **`get_info()`**: Retrieves and returns system environmental variables.
+```python
+osManag.size('filename.txt')
+```
 
-    ```python
-    print(Man_os2.get_info())
-    ```
+#### 16. Display System Information
 
-17. **`get_path()`**: Retrieves and returns executable paths.
+```python
+osManag.get_info()
+```
 
-    ```python
-    print(Man_os2.get_path())
-    ```
+#### 17. Display Executable Paths
 
+```python
+osManag.get_path()
+```
 
+---
+
+These sections provide clear instructions on how to install and use the `osManag` library with examples of each function it offers.
 
